@@ -161,9 +161,6 @@ input:-webkit-autofill:active {
 .logo-bar .buttons .active {
   background-color: rgba(8, 81, 45, 1);
 }
-.logo-bar .header-active-btn {
-}
-
 .logo-bar .buttons button:hover {
   background-color: rgba(33, 127, 64, 0.3);
 }
@@ -906,7 +903,6 @@ input:-webkit-autofill:active {
 }
 .contact-form textarea {
   padding: 6px 10px;
-
   border: none;
   outline: none;
   resize: vertical;
@@ -1087,7 +1083,6 @@ footer .copyright {
   background: rgba(255, 255, 255, 0.4);
   margin-top: 61px;
 }
-
 /* mini slider css ends  */
 
 /**********************************
