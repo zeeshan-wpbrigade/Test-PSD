@@ -126,7 +126,7 @@ input:-webkit-autofill:active {
 .logo-bar .container {
   display: flex;
   align-items: center;
-  padding-top: 9px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 .logo-bar .buttons {
@@ -372,7 +372,7 @@ input:-webkit-autofill:active {
 }
 .header-bottom .reebok-logo img {
   transform: skew(15deg);
-  margin-top: 7px;
+  margin-top: 3px;
   margin-left: -10px;
 }
 .header-bottom .reebok-logo span {
@@ -384,6 +384,9 @@ input:-webkit-autofill:active {
   transform: skew(15deg);
   margin-left: -27px;
   letter-spacing: 0.3px;
+  position: relative;
+  top: -3px;
+  left: 1px;
 }
 .header-bottom .reebok-logo::after {
   content: "";
@@ -410,10 +413,9 @@ input:-webkit-autofill:active {
   display: flex;
   transition: 0.3s linear;
   cursor: pointer;
-  /* align-items: center; */
-  /* position: absolute;
-   top: 50%;
-   transform: translateY(-50%); */
+}
+.hero-slider .arrows .left-arrow img{
+  display: block;
 }
 .hero-slider .arrows .left-arrow {
   position: absolute;
@@ -427,12 +429,15 @@ input:-webkit-autofill:active {
   transform: translateY(-50%);
   right: 40px;
 }
+.hero-slider .arrows .right-arrow img{
+  display: block;
+}
 .hero-slider .arrows:hover {
   opacity: 0.7;
 }
 
 .hero-slider .main-slider-1 {
-  padding: 70px 65px 92px 65px;
+  padding: 70px 65px 72px 65px;
 }
 
 .hero-slider .main-slider-1 .slide {
@@ -442,7 +447,7 @@ input:-webkit-autofill:active {
 .hero-slider .main-slider-1 .text {
   max-width: 50%;
   color: #fff;
-  padding: 70px 50px 50px 0px;
+  padding: 70px 20px 50px 0px;
   display: flex;
   flex-direction: column;
 }
@@ -471,7 +476,7 @@ input:-webkit-autofill:active {
   justify-content: center;
   align-items: center;
   display: flex;
-  padding: 20px 20px 20px 76px;
+  padding: 21px 15px 20px 97px;
 }
 .hero-slider .main-slider-1 .video-box .play-btn:hover {
   opacity: 0.7;
@@ -578,6 +583,7 @@ input:-webkit-autofill:active {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+  vertical-align: bottom;
   color: #fff;
   text-decoration: none;
   transition: 0.3s all;
@@ -614,17 +620,17 @@ input:-webkit-autofill:active {
 /* cards css ends */
 
 /* zigzag starts  */
-.zigzag {
+.zigzag-wrapper {
   margin-top: 20px;
 }
 
-.zigzag:nth-child(2n) {
+.zigzag:nth-child(2n + 1) {
   display: flex;
   background: #2b8b4b;
   background-image: url(../img/pattern-bg.png);
 }
 
-.zigzag:nth-child(2n) .image {
+.zigzag:nth-child(2n +1 ) .image {
   min-height: 238px;
   background-position: center;
   background-size: cover;
@@ -632,14 +638,14 @@ input:-webkit-autofill:active {
   clip-path: polygon(0px 0%, 100% 0%, calc(100% - 65px) 100%, 0% 100%);
 }
 
-.zigzag:nth-child(2n + 1) {
+.zigzag:nth-child(2n) {
   display: flex;
   background: #05572e;
 
   background-image: url(../img/pattern-bg.png);
   flex-direction: row-reverse;
 }
-.zigzag:nth-child(2n + 1) .image {
+.zigzag:nth-child(2n) .image {
   min-height: 238px;
   background-position: center;
   background-size: cover;
@@ -650,10 +656,11 @@ input:-webkit-autofill:active {
 .zigzag .content {
   width: 40%;
   display: flex;
-  flex-direction: column;
-  padding: 18px 46px 20px 30px;
-  justify-content: center;
   color: white;
+  flex-direction: column;
+  align-items: center;
+  padding: 13px 47px 15px 29px;
+  justify-content: center;
 }
 .zigzag .content .heading a {
   font-size: 20px;
@@ -663,6 +670,7 @@ input:-webkit-autofill:active {
   color: #fff;
   transition: 0.3s all;
   text-decoration: none;
+  vertical-align: bottom;
 }
 .zigzag .content .heading a:hover {
   color: #ceddd9;
@@ -702,7 +710,7 @@ input:-webkit-autofill:active {
 }
 
 .side-bar .event-list {
-  padding: 18px 10px 18px 19px;
+  padding: 18px 10px 22px 19px;
 }
 
 .side-bar .event-list .event {
@@ -862,6 +870,7 @@ input:-webkit-autofill:active {
 
 .contact-form .gender-sec .radio-btns {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 9px;
 }
 
@@ -893,7 +902,7 @@ input:-webkit-autofill:active {
   background-color: #1d7d3c;
   cursor: auto;
 }
-
+ 
 .contact-form .radio > label {
   font-family: "Roboto";
   text-transform: capitalize;
@@ -1020,7 +1029,7 @@ footer .copyright {
 /* mini slider css starts  */
 
 .owl-carousel-2 {
-  padding: 0px 33px 10px 33px;
+  padding: 0px 33px 0px 33px !important;
   position: relative;
 }
 .owl-carousel-2 .slide {
@@ -1081,7 +1090,6 @@ footer .copyright {
   width: auto;
   height: 1px;
   background: rgba(255, 255, 255, 0.4);
-  margin-top: 61px;
 }
 /* mini slider css ends  */
 
@@ -1103,10 +1111,27 @@ footer .copyright {
 *********************************/
 @media only screen and (max-width: 1023px) {
   /* .owl-carousel-2 css starts  */
+  .nav-bar .search-box {
+    padding: 0 3px 0 0px;
+}
+.main-section .left-part {
+  width: calc(100% - 302px);
+  margin-right: 45px;
+}
+.main-section .side-bar {
+width: 255px;
+min-width: 255px;
+}
+.post-thumbnail {
+  position: relative;
+  padding-bottom: 52.1%;
+}
+.side-bar .event-list {
+  padding: 18px 10px 18px 21px;
+}
 
   .owl-carousel-2 {
-    padding-left: 0px;
-    padding-right: 0;
+    padding: 0px 0px 70px 0px;
   }
   .owl-carousel-2 .slide {
     padding: 0 8px;
@@ -1121,7 +1146,12 @@ footer .copyright {
   .cards .row {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  .cards .text {
+    padding: 15px 10px 44px 10px;
+}
+.cards .text .desc {
+  margin-top: 10px;
+}
   .notification-bar .container {
     padding-top: 16px;
     padding-bottom: 12px;
@@ -1131,12 +1161,12 @@ footer .copyright {
     padding: 11px 33px;
   }
   .logo-bar .container {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .nav-bar ul li {
-    padding: 21px 22px 23px 20px;
+    padding: 20px 22px 22px 20px;
   }
   .nav-bar ul li a {
     font-size: 16px;
@@ -1144,34 +1174,35 @@ footer .copyright {
 
   .header-bottom .text span {
     font-size: 40px;
-    padding-top: 10px;
+    padding-top: 11px;
     padding-bottom: 15px;
   }
 
   .header-bottom .reebok-logo {
     max-width: 322px;
-    transform: skew(-15deg);
+    transform: skew(-19deg);
   }
   .header-bottom .reebok-logo img {
-    transform: skew(15deg);
+    transform: skew(19deg);
     margin-left: 7px;
     margin-top: 5px;
   }
   .header-bottom .reebok-logo span {
-    margin-top: 13px;
+    margin-top: 0px;
     margin-left: -14px;
-    transform: skew(15deg);
+    transform: skew(19deg);
   }
 
   /* hero slider css starts  */
   .hero-slider .main-slider-1 {
-    padding: 22px 0 95px 0px;
+    padding: 22px 0 74px 0px;
   }
   .hero-slider .main-slider-1 .text {
     padding: 65px 15px 0px 0px;
   }
   .hero-slider .main-slider-1 .text h2 {
     font-size: 40px;
+    letter-spacing: -0.2px;
   }
 
   .hero-slider .main-slider-1 .text p {
@@ -1179,7 +1210,8 @@ footer .copyright {
     margin-top: 19px;
   }
   .hero-slider .main-slider-1 .video-box {
-    padding: 32px 0px 0px 94px;
+    padding: 32px 0px 32px 0px;
+    margin-left: -3px;
   }
   .hero-slider .main-slider-1 .video-box > img {
     max-height: 290px;
@@ -1198,20 +1230,31 @@ footer .copyright {
 
   .main-section .container {
     padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   /* zigzag starts  */
   .zigzag:nth-child(2n) .image {
-    width: 60%;
+    width: 52%;
+    clip-path: polygon(0px 0%, 100% 0%, calc(100% - 0px) 100%, 18% 100%);
   }
 
   .zigzag:nth-child(2n + 1) .image {
-    width: 60%;
+    width: 52%;
   }
+  
 
   .zigzag .content {
-    width: 40%;
-    padding: 10px 15px 10px 15px;
+    width: 48%;
+    padding: 10px 50px 15px 30px;
+  }
+  .zigzag .content .title {
+    font-size: 20px;
+    letter-spacing: -0.2px;
+  }
+  .zigzag .content.desc {
+    font-size: 14px;
+    line-height: 1.3;
   }
 }
 /* Ends Media 1023  */
@@ -1243,6 +1286,7 @@ footer .copyright {
   .cards .text {
     padding: 16px 12px 25px 11px;
   }
+
   /* notification-bar css starts */
   .notification-bar .container {
     padding-top: 14px;
@@ -1264,8 +1308,8 @@ footer .copyright {
 
   /* logobar css starts  */
   .logo-bar .container {
-    padding-top: 14px;
-    padding-bottom: 13px;
+    padding-top: 17px;
+    padding-bottom: 17px;
   }
   .logo-bar .logo img {
     max-width: 92px;
@@ -1442,7 +1486,7 @@ footer .copyright {
   .zigzag:nth-child(2n + 1) {
     display: flex;
     background: #2b8b4b;
-    background-image: url(../img/pattern-bg.png);
+    /* background-image: url(../img/pattern-bg.png); */
     flex-direction: column;
   }
   .zigzag:nth-child(2n + 1) .image {
@@ -1453,15 +1497,10 @@ footer .copyright {
 
   .zigzag .content {
     width: auto;
+    align-items: flex-start;
   }
 
   /* zigzag ends  */
-
-  /* divider */
-  .slider-divider {
-    margin-top: 52px;
-  }
-
   /* main section css ends  */
 }
 
@@ -1469,6 +1508,44 @@ footer .copyright {
 ********** 320 to 560  ***********
 *********************************/
 @media only screen and (max-width: 560px) {
+  .side-bar .event-list .event .text {
+    padding-left: 7px;
+}
+
+  .cards .text .heading{
+    padding-right: 20px;
+  }
+  .owl-carousel-2 .owl-dots {
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+}
+  .owl-carousel-2 {
+    padding: 0px 0px 81px 0px;
+}
+.slider-divider {
+  margin-top: 0px;
+}
+  .hero-slider .main-slider-1 .slide {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-slider .main-slider-1 .text {
+    max-width: 100%;
+    padding: 0px 0px 0px 0px;
+    color: #fff;
+  }
+  .hero-slider .main-slider-1 .video-box {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 30px 15px 0px 0px;
+    width: 100%;
+  }
+  .hero-slider .main-slider-1 {
+    padding: 34px 0 65px 0px;
+}
+
   .contact-form {
     padding-top: 33px;
   }
@@ -1498,11 +1575,18 @@ footer .copyright {
   }
 
   .cards {
-    padding: 30px 0px;
+    padding: 30px 0px 15px 0;
   }
   .cards .row .post {
     flex: 1;
   }
+  .zigzag-wrapper{
+    margin-top: 15px;
+  }
+  .zigzag .content {
+    width: 100%;
+    padding: 16px 20px 14px 11px;
+}
 }
 
 /*********************************
@@ -1515,6 +1599,6 @@ footer .copyright {
   }
   .post-thumbnail {
     position: relative;
-    padding-bottom: 47%;
+    padding-bottom: 46.7%;
   }
 }
