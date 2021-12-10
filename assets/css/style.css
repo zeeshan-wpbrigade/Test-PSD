@@ -1088,6 +1088,7 @@ footer .copyright {
 
 /* divider */
 .slider-divider {
+  margin-top: 60px;
   width: auto;
   height: 1px;
   background: rgba(255, 255, 255, 0.4);
