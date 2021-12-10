@@ -413,22 +413,23 @@ input:-webkit-autofill:active {
 .hero-slider .arrows {
   transition: 0.3s linear;
   cursor: pointer;
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+ 
   z-index: 20;
 }
 .hero-slider .arrows .left-arrow img{
   display: block;
 }
 .hero-slider .arrows .left-arrow {
-  margin-left: 40px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
 }
 .hero-slider .arrows .right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   right: 40px;
-  position: relative;
 }
 .hero-slider .arrows .right-arrow img{
   display: block;
@@ -515,7 +516,6 @@ input:-webkit-autofill:active {
 /* hero slider css ends  */
 
 /* main-section css starts  */
-
 .main-section {
   background-color: #012c1f;
   background-image: url(../img/pattern-bg.png);
