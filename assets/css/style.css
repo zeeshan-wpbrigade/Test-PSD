@@ -286,6 +286,7 @@ input:-webkit-autofill:active {
   display: none;
 }
 .below-btns button {
+      box-shadow: 0px 2px 2.5px rgb(0 0 0 / 25%);
   color: #fff;
   background: rgba(45, 132, 73, 1);
   background-image: url(../img/pattern-bg.png);
@@ -410,24 +411,24 @@ input:-webkit-autofill:active {
 }
 
 .hero-slider .arrows {
-  display: flex;
   transition: 0.3s linear;
   cursor: pointer;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
 }
 .hero-slider .arrows .left-arrow img{
   display: block;
 }
 .hero-slider .arrows .left-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 40px;
+  margin-left: 40px;
+  position: relative;
 }
 .hero-slider .arrows .right-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   right: 40px;
+  position: relative;
 }
 .hero-slider .arrows .right-arrow img{
   display: block;
