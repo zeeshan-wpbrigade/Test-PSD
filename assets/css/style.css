@@ -286,7 +286,7 @@ input:-webkit-autofill:active {
   display: none;
 }
 .below-btns button {
-      box-shadow: 0px 2px 2.5px rgb(0 0 0 / 25%);
+  box-shadow: 0px 2px 2.5px rgb(0 0 0 / 25%);
   color: #fff;
   background: rgba(45, 132, 73, 1);
   background-image: url(../img/pattern-bg.png);
@@ -413,10 +413,10 @@ input:-webkit-autofill:active {
 .hero-slider .arrows {
   transition: 0.3s linear;
   cursor: pointer;
- 
+
   z-index: 20;
 }
-.hero-slider .arrows .left-arrow img{
+.hero-slider .arrows .left-arrow img {
   display: block;
 }
 .hero-slider .arrows .left-arrow {
@@ -431,7 +431,7 @@ input:-webkit-autofill:active {
   transform: translateY(-50%);
   right: 40px;
 }
-.hero-slider .arrows .right-arrow img{
+.hero-slider .arrows .right-arrow img {
   display: block;
 }
 .hero-slider .arrows:hover {
@@ -496,7 +496,9 @@ input:-webkit-autofill:active {
   transition: 0.3s linear;
   padding: 22px 22px 24px 30px;
 }
-
+.slick-dots{
+  left: 0;
+}
 .hero-slider .main-slider-1 .slick-dots li {
   height: 7px;
   overflow: hidden;
@@ -631,7 +633,7 @@ input:-webkit-autofill:active {
   background-image: url(../img/pattern-bg.png);
 }
 
-.zigzag:nth-child(2n +1 ) .image {
+.zigzag:nth-child(2n + 1) .image {
   min-height: 238px;
   background-position: center;
   background-size: cover;
@@ -711,7 +713,7 @@ input:-webkit-autofill:active {
 }
 
 .side-bar .event-list {
-  padding: 18px 10px 22px 19px;
+  padding: 18px 10px 25px 19px;
 }
 
 .side-bar .event-list .event {
@@ -720,7 +722,7 @@ input:-webkit-autofill:active {
 }
 
 .side-bar .event-list .event:not(:first-child) {
-  margin-top: 15px;
+  margin-top: 14px;
 }
 
 .side-bar .event-list .event .text {
@@ -756,8 +758,8 @@ input:-webkit-autofill:active {
 .counter {
   width: 48px;
   min-width: 48px;
-  height: 48px;
-  min-height: 48px;
+  height: 46px;
+  min-height: 46px;
   background: #fff;
   color: #05572e;
   font-weight: bold;
@@ -903,7 +905,7 @@ input:-webkit-autofill:active {
   background-color: #1d7d3c;
   cursor: auto;
 }
- 
+
 .contact-form .radio > label {
   font-family: "Roboto";
   text-transform: capitalize;
@@ -1050,6 +1052,7 @@ footer .copyright {
 .owl-carousel-2 .owl-dots {
   width: 100%;
   position: absolute;
+  left: 0;
 }
 
 .owl-carousel-2 .owl-dots span {
@@ -1088,7 +1091,7 @@ footer .copyright {
 
 /* divider */
 .slider-divider {
-  margin-top: 60px;
+  margin-top: 70px;
   width: auto;
   height: 1px;
   background: rgba(255, 255, 255, 0.4);
@@ -1115,22 +1118,22 @@ footer .copyright {
   /* .owl-carousel-2 css starts  */
   .nav-bar .search-box {
     padding: 0 3px 0 0px;
-}
-.main-section .left-part {
-  width: calc(100% - 302px);
-  margin-right: 45px;
-}
-.main-section .side-bar {
-width: 255px;
-min-width: 255px;
-}
-.post-thumbnail {
-  position: relative;
-  padding-bottom: 52.1%;
-}
-.side-bar .event-list {
-  padding: 18px 10px 18px 21px;
-}
+  }
+  .main-section .left-part {
+    width: calc(100% - 302px);
+    margin-right: 45px;
+  }
+  .main-section .side-bar {
+    width: 255px;
+    min-width: 255px;
+  }
+  .post-thumbnail {
+    position: relative;
+    padding-bottom: 52.1%;
+  }
+  .side-bar .event-list {
+    padding: 18px 10px 18px 21px;
+  }
 
   .owl-carousel-2 {
     padding: 0px 0px 70px 0px;
@@ -1150,10 +1153,10 @@ min-width: 255px;
   }
   .cards .text {
     padding: 15px 10px 44px 10px;
-}
-.cards .text .desc {
-  margin-top: 10px;
-}
+  }
+  .cards .text .desc {
+    margin-top: 10px;
+  }
   .notification-bar .container {
     padding-top: 16px;
     padding-bottom: 12px;
@@ -1244,7 +1247,6 @@ min-width: 255px;
   .zigzag:nth-child(2n + 1) .image {
     width: 52%;
   }
-  
 
   .zigzag .content {
     width: 48%;
@@ -1512,21 +1514,19 @@ min-width: 255px;
 @media only screen and (max-width: 560px) {
   .side-bar .event-list .event .text {
     padding-left: 7px;
-}
+  }
 
-  .cards .text .heading{
+  .cards .text .heading {
     padding-right: 20px;
   }
   .owl-carousel-2 .owl-dots {
     margin-top: 20px !important;
     margin-bottom: 0 !important;
-}
+  }
   .owl-carousel-2 {
     padding: 0px 0px 81px 0px;
-}
-.slider-divider {
-  margin-top: 0px;
-}
+  }
+
   .hero-slider .main-slider-1 .slide {
     display: flex;
     flex-direction: column;
@@ -1546,7 +1546,7 @@ min-width: 255px;
   }
   .hero-slider .main-slider-1 {
     padding: 34px 0 65px 0px;
-}
+  }
 
   .contact-form {
     padding-top: 33px;
@@ -1582,13 +1582,13 @@ min-width: 255px;
   .cards .row .post {
     flex: 1;
   }
-  .zigzag-wrapper{
+  .zigzag-wrapper {
     margin-top: 15px;
   }
   .zigzag .content {
     width: 100%;
     padding: 16px 20px 14px 11px;
-}
+  }
 }
 
 /*********************************
