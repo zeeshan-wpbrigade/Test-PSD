@@ -1507,6 +1507,7 @@ footer .copyright {
   .zigzag .content {
     width: auto;
     align-items: flex-start;
+    padding: 10px 50px 15px 15px;
   }
 
   /* zigzag ends  */
