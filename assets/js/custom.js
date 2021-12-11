@@ -3,14 +3,7 @@ function closeNoti() {
 }
 
 $(document).ready(function () {
-  $("input.deletable")
-    .wrap('<span class="deleteicon" />')
-    .after(
-      $("<span/>").click(function () {
-        $(this).prev("input").val("").trigger("change").focus();
-      })
-    );
-
+ 
   // 1. toogle nav-bar
   $("#btnOpen").click(function () {
     $("#nav-bar").slideToggle();
