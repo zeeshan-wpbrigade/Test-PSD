@@ -4,7 +4,7 @@ function closeNoti() {
 
 $(document).ready(function () {
  
-  // 1. toogle nav-bar
+   // 1. toogle nav-bar
   $("#btnOpen").click(function () {
     $("#nav-bar").slideToggle();
   });
