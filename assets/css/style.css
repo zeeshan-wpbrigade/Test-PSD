@@ -14,7 +14,23 @@ body {
 
 /* search field cross btn  */
 input[type=search]::-webkit-search-cancel-button {
-  -webkit-appearance: searchfield-cancel-button;
+  position:relative;
+
+  right: -10px;
+  -webkit-appearance: none;
+  height: 10px;
+  width: 10px;
+  background: url(../img/x-mark.png);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 4px 3px 3px 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.8;
+}
+input[type=search]::-webkit-search-cancel-button:hover {
+  opacity: 0.5;
 }
 
 /* Change Autocomplete styles in Chrome*/
@@ -49,7 +65,9 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
 	-webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
 } */
-
+.hide{
+  display: none !important;
+}
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -230,6 +248,9 @@ input:-webkit-autofill:active {
   display: flex;
   width: 100%;
   max-width: 255px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
 }
 
 .nav-bar .search-box input {
@@ -239,7 +260,7 @@ input:-webkit-autofill:active {
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 0px 12px 0px 16px;
+  padding: 0px 16px 0px 16px;
   width: 100%;
   height: 40px;
   outline: none;
@@ -358,7 +379,7 @@ input:-webkit-autofill:active {
   text-transform: uppercase;
   color: #fff;
   padding-top: 22px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   display: block;
   letter-spacing: -0.9px;
   margin-left: -2px;
@@ -374,7 +395,7 @@ input:-webkit-autofill:active {
   width: 100%;
   max-width: 335px;
   transform: skew(-15deg);
-  padding: 10px;
+  padding: 27px;
 }
 .header-bottom .reebok-logo img {
   transform: skew(15deg);
@@ -444,7 +465,8 @@ input:-webkit-autofill:active {
 }
 
 .hero-slider .main-slider-1 {
-  padding: 70px 65px 72px 65px;
+  padding: 70px 65px 70px 65px;
+  min-height: 548px;
 }
 
 .hero-slider .main-slider-1 .slide {
@@ -454,9 +476,10 @@ input:-webkit-autofill:active {
 .hero-slider .main-slider-1 .text {
   max-width: 50%;
   color: #fff;
-  padding: 70px 20px 50px 0px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  padding-right: 20px;
 }
 
 .hero-slider .main-slider-1 .text h2 {
@@ -530,7 +553,7 @@ input:-webkit-autofill:active {
 
 .main-section .container {
   display: flex;
-  padding-top: 80px;
+  padding-top: 82px;
   padding-bottom: 80px;
   flex-wrap: wrap;
 }
@@ -547,7 +570,7 @@ input:-webkit-autofill:active {
 
 /* cards css starts */
 .cards {
-  padding: 40px 0px 20px 0;
+  margin-top: 40px;
 }
 
 .cards .row {
@@ -629,7 +652,7 @@ input:-webkit-autofill:active {
 
 /* zigzag starts  */
 .zigzag-wrapper {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .zigzag:nth-child(2n + 1) {
@@ -1583,13 +1606,13 @@ footer .copyright {
   }
 
   .cards {
-    padding: 30px 0px 15px 0;
+    margin-top: 30px;
   }
   .cards .row .post {
     flex: 1;
   }
   .zigzag-wrapper {
-    margin-top: 15px;
+    margin-top: 30px;
   }
   .zigzag .content {
     width: 100%;
