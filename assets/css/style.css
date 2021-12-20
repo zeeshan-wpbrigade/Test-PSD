@@ -561,6 +561,7 @@ input:-webkit-autofill:active {
   display: flex;
   padding: 21px 15px 20px 97px;
 }
+
 .hero-slider .main-slider-1 .video-box .play-btn:hover {
   opacity: 0.7;
 }
@@ -577,17 +578,21 @@ input:-webkit-autofill:active {
   transition: 0.3s linear;
   padding: 22px 22px 24px 30px;
 }
+
 .slick-dots {
   left: 0;
 }
+
 .hero-slider .main-slider-1 .slick-dots li {
   height: 7px;
   overflow: hidden;
 }
+
 .hero-slider .main-slider-1 .slick-dots li button {
   background: rgb(161, 161, 161);
   transition: 0.3s linear;
 }
+
 .hero-slider .main-slider-1 .slick-dots li.slick-active button {
   cursor: auto;
   background: rgba(255, 255, 255, 1);
@@ -672,9 +677,11 @@ input:-webkit-autofill:active {
   text-decoration: none;
   transition: 0.3s all;
 }
+
 .cards .text .heading a:hover {
   color: #ceddd9;
 }
+
 .cards .text .desc {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -697,6 +704,7 @@ input:-webkit-autofill:active {
   color: #fff;
   transition: 0.3s linear;
 }
+
 .cards button:hover {
   background-color: rgba(18, 87, 53, 0.1);
 }
@@ -729,6 +737,7 @@ input:-webkit-autofill:active {
   background-image: url(../img/pattern-bg.png);
   flex-direction: row-reverse;
 }
+
 .zigzag:nth-child(2n) .image {
   min-height: 238px;
   background-position: center;
@@ -746,6 +755,7 @@ input:-webkit-autofill:active {
   padding: 13px 47px 15px 29px;
   justify-content: center;
 }
+
 .zigzag .content .heading a {
   font-size: 20px;
   line-height: 24px;
@@ -756,9 +766,11 @@ input:-webkit-autofill:active {
   text-decoration: none;
   vertical-align: bottom;
 }
+
 .zigzag .content .heading a:hover {
   color: #ceddd9;
 }
+
 .zigzag .content .desc {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -768,7 +780,6 @@ input:-webkit-autofill:active {
   font-size: 14px;
   line-height: 18px;
 }
-
 /* zigzag ends  */
 
 /* main section css ends  */
@@ -812,11 +823,13 @@ input:-webkit-autofill:active {
   font-weight: 400;
   padding-left: 10px;
 }
+
 .side-bar .event-list .event .title {
   font-size: 18px;
   line-height: 24px;
   margin: 0;
 }
+
 .side-bar .event-list .event .title a {
   text-underline-offset: 0.1em;
   color: #fff;
@@ -824,9 +837,11 @@ input:-webkit-autofill:active {
   transition: 0.3s linear;
   letter-spacing: 0.3px;
 }
+
 .side-bar .event-list .event .title a:hover {
   text-decoration: none;
 }
+
 .side-bar .event-list .event .country {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -994,6 +1009,7 @@ input:-webkit-autofill:active {
   line-height: 24px;
   font-weight: 400 !important;
 }
+
 .contact-form textarea {
   padding: 6px 10px;
   border: none;
@@ -1005,6 +1021,7 @@ input:-webkit-autofill:active {
   font-weight: 400 !important;
   line-height: 24px !important;
 }
+
 .contact-form .submit-btn {
   display: flex;
   align-items: center;
@@ -1047,6 +1064,7 @@ footer {
   /* margin: 0; */
   color: #fff;
 }
+
 footer .footer-nav {
   display: flex;
   justify-content: center;
@@ -1054,13 +1072,16 @@ footer .footer-nav {
   padding-right: 20px;
   padding-left: 20px;
 }
+
 footer .footer-nav li {
   list-style: none;
 }
+
 footer .footer-nav li:not(:last-child):after {
   content: "/";
   font-weight: bold;
 }
+
 footer .footer-nav li a {
   margin: 11px;
 
@@ -1071,6 +1092,7 @@ footer .footer-nav li a {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
 }
+
 footer .footer-nav li a:hover {
   text-decoration: underline;
   transition: 0.3s;
@@ -1084,19 +1106,24 @@ footer .social-icons {
   transition: 1.3s;
   margin-top: 17px;
 }
+
 footer .social-icons li:hover {
   opacity: 0.7;
 }
+
 footer .social-icons li {
   list-style-type: none;
   padding: 0% 10px;
 }
+
 footer .social-icons li:nth-child(2) {
   margin-top: -2px;
 }
+
 footer .social-icons li:nth-child(4) {
   margin-top: -3px;
 }
+
 footer .copyright {
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -1116,20 +1143,24 @@ footer .copyright {
   padding: 0px 33px 0px 33px;
   position: relative;
 }
+
 .owl-carousel-2 .slide {
   width: auto;
   /* padding: 0 14px; */
   margin: 0px 12px 0px 14px;
 }
+
 .owl-carousel-2 .slide .box {
   border: 9px solid rgba(230, 255, 230, 0.15);
   height: auto;
 }
+
 .owl-carousel-2 .slide .box img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .owl-carousel-2 .owl-dots {
   width: 100%;
   position: absolute;
@@ -1152,6 +1183,7 @@ footer .copyright {
   border: none !important;
   outline: none !important;
 }
+
 .owl-carousel-2 .owl-prev,
 .owl-carousel-2 .owl-next {
   position: absolute;
