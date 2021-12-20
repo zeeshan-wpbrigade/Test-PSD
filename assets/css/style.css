@@ -13,8 +13,8 @@ body {
 }
 
 /* search field cross btn  */
-input[type=search]::-webkit-search-cancel-button {
-  position:relative;
+input[type="search"]::-webkit-search-cancel-button {
+  position: relative;
 
   right: -10px;
   -webkit-appearance: none;
@@ -29,9 +29,10 @@ input[type=search]::-webkit-search-cancel-button {
   cursor: pointer;
   opacity: 0.8;
 }
-input[type=search]::-webkit-search-cancel-button:hover {
+input[type="search"]::-webkit-search-cancel-button:hover {
   opacity: 0.5;
 }
+
 .tooltip {
   position: absolute;
   right: 5px;
@@ -47,7 +48,6 @@ input[type=search]::-webkit-search-cancel-button:hover {
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
@@ -57,9 +57,7 @@ input[type=search]::-webkit-search-cancel-button:hover {
   visibility: visible;
 }
 
-
 /* Change Autocomplete styles in Chrome*/
-
 .search-box input:-webkit-autofill,
 .search-box input:-webkit-autofill:hover,
 .search-box input:-webkit-autofill:focus {
@@ -90,9 +88,11 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
 	-webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
 } */
-.hide{
+
+.hide {
   display: none !important;
 }
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -171,20 +171,24 @@ input:-webkit-autofill:active {
   background-color: #012c1f;
   background-image: url(../img/pattern-bg.png);
 }
+
 .logo-bar .container {
   display: flex;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .logo-bar .buttons {
   margin-left: auto;
   font-size: 0;
 }
+
 .logo-bar .logo img {
   /* vertical-align: bottom; */
   display: block;
 }
+
 .logo-bar .buttons button {
   background-image: url(../img/pattern-bg.png);
   border: none;
@@ -202,16 +206,20 @@ input:-webkit-autofill:active {
   font-family: "Oswald", sans-serif;
   margin-left: 10px;
 }
+
 .logo-bar .buttons button span {
   transform: skewX(15deg);
   display: block;
 }
+
 .logo-bar .buttons .active {
   background-color: rgba(8, 81, 45, 1);
 }
+
 .logo-bar .buttons button:hover {
   background-color: rgba(33, 127, 64, 0.3);
 }
+
 .logo-bar .buttons .active:hover {
   background-color: rgba(8, 81, 45, 0.3);
 }
@@ -228,10 +236,12 @@ input:-webkit-autofill:active {
 
   overflow: auto;
 }
+
 .nav-bar .container {
   display: flex;
   align-items: center;
 }
+
 .nav-bar ul {
   padding: 0;
   margin: 0;
@@ -239,6 +249,7 @@ input:-webkit-autofill:active {
   flex-wrap: wrap;
   list-style-type: none;
 }
+
 .nav-bar ul li {
   padding: 21px 30px 21px 32px;
   cursor: pointer;
@@ -314,7 +325,6 @@ input:-webkit-autofill:active {
   max-height: 38px;
   margin-top: 2px;
 } */
-
 .nav-bar .search-box input[type="submit"] {
   background: url(../img/search-icon.png);
   max-width: 44px;
@@ -325,6 +335,7 @@ input:-webkit-autofill:active {
   cursor: pointer;
   transition: 0.3s all;
 }
+
 .nav-bar .search-box input[type="submit"]:hover {
   opacity: 0.7;
 }
@@ -337,6 +348,7 @@ input:-webkit-autofill:active {
 .below-btns {
   display: none;
 }
+
 .below-btns button {
   box-shadow: 0px 2px 2.5px rgb(0 0 0 / 25%);
   color: #fff;
@@ -354,16 +366,19 @@ input:-webkit-autofill:active {
   cursor: pointer;
   font-family: "Oswald", sans-serif;
 }
+
 .below-btns button.active {
   background: rgba(33, 94, 52, 1);
   background-image: url(../img/pattern-bg.png);
   padding: 11px 34px;
   border-left: 1px solid #fff;
 }
+
 .below-btns button:hover {
   background: rgba(33, 94, 52, 1);
   background-image: url(../img/pattern-bg.png);
 }
+
 .below-btns button.active:hover {
   background: rgba(45, 132, 73, 1);
   background-image: url(../img/pattern-bg.png);
@@ -378,10 +393,10 @@ input:-webkit-autofill:active {
   cursor: pointer;
   transition: 0.3s linear;
 }
+
 .logo-bar .menu-btn:hover {
   opacity: 0.7;
 }
-
 /* nav-bar css ends  */
 
 /* header-bottom css starts  */
@@ -390,14 +405,17 @@ input:-webkit-autofill:active {
   background-image: url(../img/pattern-bg.png);
   overflow: hidden;
 }
+
 .header-bottom .container {
   display: flex;
   justify-content: space-between;
 }
+
 .header-bottom .text {
   display: flex;
   align-self: center;
 }
+
 .header-bottom .text span {
   font-weight: 500;
   font-size: 50px;
@@ -410,6 +428,7 @@ input:-webkit-autofill:active {
   letter-spacing: -0.9px;
   margin-left: -2px;
 }
+
 .header-bottom .reebok-logo {
   display: flex;
   flex-direction: column;
@@ -423,11 +442,13 @@ input:-webkit-autofill:active {
   transform: skew(-15deg);
   padding: 27px;
 }
+
 .header-bottom .reebok-logo img {
   transform: skew(15deg);
   margin-top: 3px;
   margin-left: -10px;
 }
+
 .header-bottom .reebok-logo span {
   font-weight: 500 !important;
   font-size: 14px;
@@ -441,6 +462,7 @@ input:-webkit-autofill:active {
   top: -3px;
   left: 1px;
 }
+
 .header-bottom .reebok-logo::after {
   content: "";
   position: absolute;
@@ -468,24 +490,29 @@ input:-webkit-autofill:active {
 
   z-index: 20;
 }
+
 .hero-slider .arrows .left-arrow img {
   display: block;
 }
+
 .hero-slider .arrows .left-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 40px;
 }
+
 .hero-slider .arrows .right-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 40px;
 }
+
 .hero-slider .arrows .right-arrow img {
   display: block;
 }
+
 .hero-slider .arrows:hover {
   opacity: 0.7;
 }
@@ -550,7 +577,7 @@ input:-webkit-autofill:active {
   transition: 0.3s linear;
   padding: 22px 22px 24px 30px;
 }
-.slick-dots{
+.slick-dots {
   left: 0;
 }
 .hero-slider .main-slider-1 .slick-dots li {
