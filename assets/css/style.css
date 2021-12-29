@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
+} 
 body {
   font-family: "Oswald", sans-serif;
   overflow-x: hidden;
@@ -17,12 +17,9 @@ input[type="search"]::-webkit-search-cancel-button {
   position: relative;
   right: -10px;
   -webkit-appearance: none;
-  height: 10px;
-  width: 10px;
+  height: 25px;
+  width: 25px;
   background: url(../img/x-mark.png);
-  border: 1px solid #fff;
-  border-radius: 50%;
-  padding: 5px 4px 4px 5px;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -94,7 +91,8 @@ input:-webkit-autofill:active {
 
 .container {
   max-width: 1140px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -103,23 +101,32 @@ input:-webkit-autofill:active {
   overflow: hidden;
 }
 
-/* notification-bar css starts  */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+/***** notification-bar css *****/
 .notification-bar {
   background-color: #fff;
   background-image: url(../img/pattern-bg.png);
   position: relative;
 }
+
 .notification-bar .container {
   padding-top: 16px;
   padding-bottom: 12px;
 }
-.notification-bar .text {
+
+.notification-bar .noti-text {
   text-align: center;
   padding-left: 50px;
   padding-right: 50px;
 }
 
-.notification-bar .text p {
+.notification-bar .noti-text p {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -128,14 +135,18 @@ input:-webkit-autofill:active {
   padding: 0;
   margin: 0;
 }
-.notification-bar .text p a {
+
+.notification-bar .noti-text p a {
   font-family: "Roboto", sans-serif;
   color: rgba(44, 131, 73, 1);
 }
-.notification-bar .text p a:hover {
+
+.notification-bar .noti-text p a:hover {
   text-decoration: none;
 }
-.notification-bar .cross-button {
+
+.notification-bar .cn-button {
+  border: none;
   background-color: rgba(44, 131, 73, 1);
   background-image: url(../img/pattern-bg.png);
   display: flex;
@@ -150,22 +161,16 @@ input:-webkit-autofill:active {
   margin-left: auto;
   transition: 0.3s linear;
 }
-.notification-bar .cross-button img {
+
+.notification-bar .cn-button img {
   padding: 7px 6px 6px 7px;
 }
-.notification-bar .cross-button:hover {
+
+.notification-bar .cn-button:hover {
   opacity: 0.8;
 }
-/* notification-bar css ends  */
 
-.header {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 5;
-}
-
-/* logo-bar css starts  */
+/***** logo-bar css *****/
 .logo-bar {
   background-color: #012c1f;
   background-image: url(../img/pattern-bg.png);
@@ -178,20 +183,22 @@ input:-webkit-autofill:active {
   padding-bottom: 10px;
 }
 
-.logo-bar .buttons {
+.logo-bar .header-buttons {
   margin-left: auto;
   font-size: 0;
+  display: flex;
 }
 
-.logo-bar .logo img {
+.logo-bar .brand-logo img {
   /* vertical-align: bottom; */
   display: block;
 }
 
-.logo-bar .buttons button {
+.logo-bar .header-buttons a {
   background-image: url(../img/pattern-bg.png);
-  border: none;
-  background-color: rgba(33, 127, 64, 1);
+  display: block;
+  text-decoration: none;
+  text-align: center;
   color: #fff;
   text-transform: uppercase;
   font-size: 16px;
@@ -206,42 +213,47 @@ input:-webkit-autofill:active {
   margin-left: 10px;
 }
 
-.logo-bar .buttons button span {
+.logo-bar .header-buttons a:nth-child(even) {
+  background-color: rgba(33, 127, 64, 1);
+}
+
+.logo-bar .header-buttons a:nth-child(odd) {
+  background-color: rgba(8, 81, 45, 1);
+}
+
+.logo-bar .header-buttons a:nth-child(even):hover {
+  background-color: rgb(38, 158, 78);
+}
+
+.logo-bar .header-buttons a:nth-child(odd):hover {
+  background-color: rgb(7, 100, 54);
+}
+
+.logo-bar .header-buttons a span {
   transform: skewX(15deg);
   display: block;
 }
 
-.logo-bar .buttons .active {
-  background-color: rgba(8, 81, 45, 1);
-}
-
-.logo-bar .buttons button:hover {
-  background-color: rgba(33, 127, 64, 0.3);
-}
-
-.logo-bar .buttons .active:hover {
+.logo-bar .header-buttons .active:hover {
   background-color: rgba(8, 81, 45, 0.3);
 }
-/* logo-bar css ends  */
 
 /* nav-bar css starts  */
-.nav-bar {
+.nav-bar-section {
   background-color: #08512d;
   background-image: url(../img/pattern-bg.png);
-
   position: relative;
   z-index: 1;
   box-shadow: 0px 2px 2.5px rgba(0, 0, 0, 0.25);
-
   overflow: auto;
 }
 
-.nav-bar .container {
+.nav-bar-section .container {
   display: flex;
   align-items: center;
 }
 
-.nav-bar ul {
+.nav-bar-section ul {
   padding: 0;
   margin: 0;
   display: flex;
@@ -249,14 +261,14 @@ input:-webkit-autofill:active {
   list-style-type: none;
 }
 
-.nav-bar ul li {
+.nav-bar-section ul li {
   padding: 21px 30px 21px 32px;
   cursor: pointer;
   transition: 0.3s linear;
   transform: skew(-15deg);
 }
 
-.nav-bar ul li a {
+.nav-bar-section ul li a {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 18px;
@@ -267,16 +279,16 @@ input:-webkit-autofill:active {
   display: block;
 }
 
-.nav-bar ul li.active {
+.nav-bar-section ul li.active {
   background-color: rgba(27, 125, 59, 1);
   background-image: url(../img/pattern-bg.png);
 }
-.nav-bar ul li:hover {
+.nav-bar-section ul li:hover {
   background-color: rgba(27, 125, 59, 1);
   background-image: url(../img/pattern-bg.png);
 }
 
-.nav-bar .search-box {
+.nav-bar-section .search-box {
   background-color: #012c1f;
   background-image: url(../img/pattern-bg.png);
   margin-left: auto;
@@ -289,7 +301,7 @@ input:-webkit-autofill:active {
   position: relative;
 }
 
-.nav-bar .search-box input {
+.nav-bar-section .search-box input {
   background: none;
   border: none;
   font-size: 16px;
@@ -304,27 +316,12 @@ input:-webkit-autofill:active {
   color: #fff;
 }
 
-.nav-bar input {
-  border: 1px solid red;
-}
-
-.nav-bar .search-box input::placeholder {
+.nav-bar-section .search-box input::placeholder {
   color: #fff;
   opacity: 0.7;
 }
 
-/* .nav-bar .search-box button {
-  background: none;
-  border: none;
-  padding: 10px 18px 10px 10px;
-  cursor: pointer;
-  transition: 0.3s linear;
-  max-width: calc(255px - 44px);
-  max-width: 44px;
-  max-height: 38px;
-  margin-top: 2px;
-} */
-.nav-bar .search-box input[type="submit"] {
+.nav-bar-section .search-box input[type="submit"] {
   background: url(../img/search-icon.png);
   max-width: 44px;
   background-position: center;
@@ -335,26 +332,23 @@ input:-webkit-autofill:active {
   transition: 0.3s all;
 }
 
-.nav-bar .search-box input[type="submit"]:hover {
+.nav-bar-section .search-box input[type="submit"]:hover {
   opacity: 0.7;
 }
 
-/* .nav-bar .search-box button:hover {
-  opacity: 0.7;
-} */
-
-/* Below btn display on mobile view  */
+/***** Below btn display on mobile view *****/
 .below-btns {
   display: none;
 }
 
-.below-btns button {
+.below-btns a {
   box-shadow: 0px 2px 2.5px rgb(0 0 0 / 25%);
   color: #fff;
-  background: rgba(45, 132, 73, 1);
+  text-align: center;
+  display: block;
+  text-decoration: none;
   background-image: url(../img/pattern-bg.png);
   cursor: pointer;
-  border: none;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -366,25 +360,30 @@ input:-webkit-autofill:active {
   font-family: "Oswald", sans-serif;
 }
 
-.below-btns button.active {
-  background: rgba(33, 94, 52, 1);
-  background-image: url(../img/pattern-bg.png);
-  padding: 11px 34px;
+.below-btns a:nth-child(even) {
+  background-color: rgba(45, 132, 73, 1);
   border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.below-btns a:last-child {
+  background-color: rgba(45, 132, 73, 1);
+  border-right: none;
 }
 
-.below-btns button:hover {
-  background: rgba(33, 94, 52, 1);
-  background-image: url(../img/pattern-bg.png);
+.below-btns a:nth-child(odd) {
+  background-color: rgba(33, 94, 52, 1);
 }
 
-.below-btns button.active:hover {
-  background: rgba(45, 132, 73, 1);
-  background-image: url(../img/pattern-bg.png);
+.below-btns a:nth-child(even):hover {
+  background-color: rgb(27, 148, 65);
 }
 
-/* burger and cross btn for mobile view   */
-.logo-bar .menu-btn {
+.below-btns a:nth-child(odd):hover {
+  background-color: rgb(15, 124, 50);
+}
+
+/***** burger and cross btn for mobile view *****/
+.logo-bar .navbar-toggler-icon {
   margin-left: auto;
   background: none;
   border: none;
@@ -393,29 +392,28 @@ input:-webkit-autofill:active {
   transition: 0.3s linear;
 }
 
-.logo-bar .menu-btn:hover {
+.logo-bar .navbar-toggler-icon:hover {
   opacity: 0.7;
 }
-/* nav-bar css ends  */
 
-/* header-bottom css starts  */
-.header-bottom {
+/***** page-title css *****/
+.page-title-sec {
   background-color: #1b7d3b;
   background-image: url(../img/pattern-bg.png);
   overflow: hidden;
 }
 
-.header-bottom .container {
+.page-title-sec .container {
   display: flex;
   justify-content: space-between;
 }
 
-.header-bottom .text {
+.page-title-sec .page-title {
   display: flex;
   align-self: center;
 }
 
-.header-bottom .text span {
+.page-title-sec .page-title span {
   font-weight: 500;
   font-size: 50px;
   line-height: 54px;
@@ -428,7 +426,7 @@ input:-webkit-autofill:active {
   margin-left: -2px;
 }
 
-.header-bottom .reebok-logo {
+.page-title-sec .reebok-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -442,13 +440,13 @@ input:-webkit-autofill:active {
   padding: 27px;
 }
 
-.header-bottom .reebok-logo img {
+.page-title-sec .reebok-logo img {
   transform: skew(15deg);
   margin-top: 3px;
   margin-left: -10px;
 }
 
-.header-bottom .reebok-logo span {
+.page-title-sec .reebok-logo span {
   font-weight: 500 !important;
   font-size: 14px;
   line-height: 18px;
@@ -462,16 +460,15 @@ input:-webkit-autofill:active {
   left: 1px;
 }
 
-.header-bottom .reebok-logo::after {
+.page-title-sec .reebok-logo::after {
   content: "";
   position: absolute;
-  height: 100%;
+  height: 125%;
   width: 100vw;
   left: 99%;
   background-color: #f8f8f8;
   background-image: url(../images/pattern-bg.png);
 }
-/* header-bottom css ends  */
 
 /* hero slider css starts  */
 .hero-slider {
@@ -804,7 +801,7 @@ input:-webkit-autofill:active {
 }
 
 .side-bar .event-list {
-  padding: 18px 10px 25px 19px;
+  padding: 20px 10px 25px 19px;
 }
 
 .side-bar .event-list .event {
@@ -851,7 +848,6 @@ input:-webkit-autofill:active {
 }
 
 .counter {
-  width: 48px;
   min-width: 48px;
   height: 46px;
   min-height: 46px;
@@ -865,10 +861,6 @@ input:-webkit-autofill:active {
   font-weight: bold;
   font-size: 22px;
   line-height: 24px;
-}
-
-.counter:first-child {
-  margin-top: 2px;
 }
 
 .counter::before {
@@ -911,6 +903,9 @@ input:-webkit-autofill:active {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
+}
+
+.contact-form .form-inline:not(:first-child) {
   margin-top: 15px;
 }
 
@@ -1051,7 +1046,7 @@ input:-webkit-autofill:active {
 /* contact form css ends  */
 
 /* footer starts */
-footer {
+.footer {
   background-color: #093225;
   background-image: url(../img/pattern-bg.png);
   padding-top: 30px;
@@ -1064,24 +1059,27 @@ footer {
   color: #fff;
 }
 
-footer .footer-nav {
+.footer .container{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.footer .footer-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-right: 20px;
-  padding-left: 20px;
 }
 
-footer .footer-nav li {
+.footer .footer-nav li {
   list-style: none;
 }
 
-footer .footer-nav li:not(:last-child):after {
+.footer .footer-nav li:not(:last-child):after {
   content: "/";
   font-weight: bold;
 }
 
-footer .footer-nav li a {
+.footer .footer-nav li a {
   margin: 11px;
 
   color: #fff;
@@ -1092,38 +1090,40 @@ footer .footer-nav li a {
   font-weight: 500;
 }
 
-footer .footer-nav li a:hover {
+.footer .footer-nav li a:hover {
   text-decoration: underline;
   transition: 0.3s;
 }
 
-footer .social-icons {
+.footer .social-icons {
   display: flex;
   position: relative;
   left: 3px;
   padding-left: 0;
   transition: 1.3s;
   margin-top: 17px;
+  justify-content: center;
 }
 
-footer .social-icons li:hover {
+.footer .social-icons li:hover {
   opacity: 0.7;
 }
 
-footer .social-icons li {
+.footer .social-icons li {
   list-style-type: none;
   padding: 0% 10px;
+  transition: 0.3s all;
 }
 
-footer .social-icons li:nth-child(2) {
+.footer .social-icons li:nth-child(2) {
   margin-top: -2px;
 }
 
-footer .social-icons li:nth-child(4) {
+.footer .social-icons li:nth-child(4) {
   margin-top: -3px;
 }
 
-footer .copyright {
+.footer .copyright {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 300 !important;
@@ -1228,7 +1228,7 @@ footer .copyright {
 *********************************/
 @media only screen and (max-width: 1023px) {
   /* .owl-carousel-2 css starts  */
-  .nav-bar .search-box {
+  .nav-bar-section .search-box {
     padding: 0 3px 0 0px;
   }
   .main-section .left-part {
@@ -1236,8 +1236,8 @@ footer .copyright {
     margin-right: 45px;
   }
   .main-section .side-bar {
-    width: 255px;
-    min-width: 255px;
+    width: 100%;
+    margin-top: 50px;
   }
   .post-thumbnail {
     position: relative;
@@ -1261,7 +1261,7 @@ footer .copyright {
   /* .owl-carousel-2 css ends  */
 
   .cards .row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .cards .text {
     padding: 15px 10px 44px 10px;
@@ -1274,7 +1274,7 @@ footer .copyright {
     padding-bottom: 12px;
   }
 
-  .logo-bar .buttons button {
+  .logo-bar .header-buttons a {
     padding: 11px 33px;
   }
   .logo-bar .container {
@@ -1282,29 +1282,34 @@ footer .copyright {
     padding-bottom: 10px;
   }
 
-  .nav-bar ul li {
+  .nav-bar-section ul li {
     padding: 20px 22px 22px 20px;
   }
-  .nav-bar ul li a {
+  .nav-bar-section ul li a {
     font-size: 16px;
   }
 
-  .header-bottom .text span {
+  .page-title-sec .page-title span {
     font-size: 40px;
     padding-top: 11px;
     padding-bottom: 15px;
   }
 
-  .header-bottom .reebok-logo {
-    max-width: 322px;
+  .page-title-sec .reebok-logo {
+    padding-top: 11px;
+    padding-bottom: 15px;
+  }
+
+  .page-title-sec .reebok-logo {
+    max-width: 333px;
     transform: skew(-19deg);
   }
-  .header-bottom .reebok-logo img {
+  .page-title-sec .reebok-logo img {
     transform: skew(19deg);
     margin-left: 7px;
     margin-top: 5px;
   }
-  .header-bottom .reebok-logo span {
+  .page-title-sec .reebok-logo span {
     margin-top: 0px;
     margin-left: -14px;
     transform: skew(19deg);
@@ -1350,6 +1355,11 @@ footer .copyright {
     padding-bottom: 60px;
   }
 
+  .main-section .left-part {
+    width: 100%;
+    margin-right: 0;
+  }
+
   /* zigzag starts  */
   .zigzag:nth-child(2n) .image {
     width: 52%;
@@ -1377,17 +1387,21 @@ footer .copyright {
 
 /* Extra Media Query  */
 @media only screen and (max-width: 850px) {
-  .nav-bar ul li {
-    padding: 16px 16px 16px 16px;
+  .nav-bar-section ul li {
+    padding: 16px 15px 15px 16px;
   }
-  .nav-bar ul li a {
+  .nav-bar-section ul li a {
     font-size: 15px;
+  }
+  .nav-bar-section .search-box {
+    margin-top: 6px;
+    margin-bottom: 6px;
   }
 }
 
 /* adjust the burger icons */
-@media only screen and (min-width: 767px) {
-  .logo-bar .menu-btn {
+@media only screen and (min-width: 768px) {
+  .logo-bar .navbar-toggler-icon {
     display: none !important;
   }
   #nav-bar {
@@ -1403,51 +1417,55 @@ footer .copyright {
     padding: 16px 12px 25px 11px;
   }
 
+  .cards .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   /* notification-bar css starts */
   .notification-bar .container {
     padding-top: 14px;
     padding-bottom: 14px;
   }
 
-  .notification-bar .text {
+  .notification-bar .noti-text {
     padding-left: 0px;
   }
 
-  .notification-bar .text p {
+  .notification-bar .noti-text p {
     text-align: left;
     font-size: 12px;
     line-height: 22px;
     padding-left: 0;
   }
 
-  /* notification-bar css ends */
-
   /* logobar css starts  */
   .logo-bar .container {
     padding-top: 17px;
     padding-bottom: 17px;
   }
-  .logo-bar .logo img {
+
+  .logo-bar .brand-logo img {
     max-width: 92px;
   }
-  .logo-bar .buttons {
+
+  .logo-bar .header-buttons {
     display: none;
   }
-  .logo-bar .menu-btn {
+
+  .logo-bar .navbar-toggler-icon {
     display: block;
     margin-top: 3px;
   }
-  .logo-bar .menu-btn.close {
+
+  .logo-bar .navbar-toggler-icon.close {
     display: none;
   }
-  /* logobar css ends  */
 
   /* below btns css starts  */
   .below-btns {
     display: block;
     display: flex;
   }
-  /* below btns css starts  */
 
   /* nav-bar styling starts  */
   #nav-bar {
@@ -1455,57 +1473,61 @@ footer .copyright {
     height: 100vh;
     width: 100%;
     z-index: 5;
-    padding: 10px 5px 9px 5px;
   }
 
-  .nav-bar .container {
+  .nav-bar-section .container {
     flex-direction: column-reverse;
     align-items: flex-start;
     height: auto;
+    padding: 20px 20px 15px 20px;
   }
-  .nav-bar .search-box {
-    width: 96%;
 
+  .nav-bar-section .search-box {
+    width: 96%;
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 100%;
   }
-  .nav-bar .search-box input[type="text"] {
+
+  .nav-bar-section .search-box input[type="text"] {
     padding: 10px;
     font-weight: bold;
     width: 100%;
   }
-  .nav-bar .search-box input[type="submit"] {
+
+  .nav-bar-section .search-box input[type="submit"] {
     width: 38px;
   }
 
-  .nav-bar ul {
+  .nav-bar-section ul {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
   }
 
-  .nav-bar ul li {
+  .nav-bar-section ul li {
     transform: skew(0);
     clip-path: polygon(0% 0, 100% 0%, 88% 100%, 0% 100%);
     padding: 20px 30px 22px 20px;
   }
 
-  .nav-bar ul li a {
+  .nav-bar-section ul li a {
     color: #fff;
     font-size: 16px;
     line-height: 18px;
     transform: skew(0);
   }
 
-  /* nav-bar styling ends */
+  .nav-bar-section .search-box {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 
   /* header bottom starts  */
-  .header-bottom {
+  .page-title-sec {
     display: none;
   }
-  /* boder bottom ends  */
 
   /* hero slider css starts  */
   .hero-slider .main-slider-1 {
@@ -1566,23 +1588,9 @@ footer .copyright {
   /* hero slider css ends  */
 
   /* main section css starts  */
-
   .main-section .container {
     display: flex;
     flex-direction: column;
-  }
-
-  .main-section .side-bar {
-    width: auto;
-    margin-top: 50px;
-  }
-
-  .main-section .left-part {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .main-section .container {
     padding-top: 40px;
     padding-bottom: 50px;
   }
@@ -1614,7 +1622,7 @@ footer .copyright {
   .zigzag .content {
     width: auto;
     align-items: flex-start;
-    padding: 10px 50px 15px 15px;
+    padding: 30px 50px 30px 15px;
   }
 
   /* zigzag ends  */

@@ -79,35 +79,35 @@
       <!-- Notification-bar  -->
       <div class="notification-bar" id="notification-bar">
         <div class="container">
-          <div class="text">
+          <div class="noti-text">
             <p>
               live race stream from gator nationals in sarasota, fl /
               <a href=""> watch now</a>
             </p>
           </div>
-          <div class="cross-button" onclick="closeNoti()">
-            <img src="assets/img/x-mark.png" alt="Close_Notification" />
-          </div>
         </div>
+             <button class="cn-button" onclick="closeNoti()">
+             <img src="assets/img/x-mark.png" alt="Close_Notification" />
+             </button>
       </div>
 
       <!-- logo-bar  -->
       <div class="logo-bar">
         <div class="container">
-          <div class="logo">
+          <div class="brand-logo">
             <a href=""><img src="assets/img/logo.png" alt="" /></a>
           </div>
-          <div class="buttons">
-            <button class="header-memnership-btn">
+          <div class="header-buttons">
+            <a href="#" class="">
               <span>membership</span>
-            </button>
-            <button class="active header-active-btn">
+            </a>
+            <a href="#" class="">
               <span>account</span>
-            </button>
+            </a>
           </div>
 
-          <!-- Menu btns -->
-          <button onclick="openMenu()" id="btnOpen" class="menu-btn">
+          <!-- burger icon btns -->
+          <button onclick="openMenu()" id="btnOpen" class="navbar-toggler-icon">
             <img
               src="assets/img/burger-icon.png"
               alt="Open-menu"
@@ -120,12 +120,12 @@
 
       <!-- Colapse able btns -->
       <div class="below-btns">
-        <button>membership</button>
-        <button class="active">account</button>
+        <a href="#">membership</a>
+        <a href="#">account</a>
       </div>
 
       <!-- nav-bar  -->
-      <div class="nav-bar" id="nav-bar">
+      <div class="nav-bar-section" id="nav-bar">
         <div class="container">
           <nav>
             <ul>
@@ -151,20 +151,16 @@
               name="Search"
               class="input-data"
             />
-
-            <!-- <button>
-                <img src="assets/img/search-icon.png" alt="" />
-              </button> -->
             <input type="submit" value="" class="submit-data" />
           </form>
         </div>
       </div>
     </header>
 
-    <!-- header-bottom  -->
-    <div class="header-bottom">
+    <!-- page-title-sec  -->
+    <div class="page-title-sec">
       <div class="container">
-        <div class="text">
+        <div class="page-title">
           <span>home page</span>
         </div>
         <div class="reebok-logo">
@@ -291,44 +287,7 @@
                 <img src="assets/img/thubnail-slider-img.png" />
               </div>
             </div>
-            <div class="slide">
-              <div class="box">
-                <img src="assets/img/thubnail-slider-img.png" />
-              </div>
-            </div>
-            <div class="slide">
-              <div class="box">
-                <img src="assets/img/thubnail-slider-img.png" />
-              </div>
-            </div>
-            <div class="slide">
-              <div class="box">
-                <img src="assets/img/thubnail-slider-img.png" />
-              </div>
-            </div>
-            <div class="slide">
-              <div class="box">
-                <img src="assets/img/thubnail-slider-img.png" />
-              </div>
-            </div>
-
-            <div class="slide">
-              <div class="box">
-                <img src="assets/img/thubnail-slider-img.png" />
-              </div>
-            </div>
-
-            <div class="slide">
-              <div class="box">
-                <img src="assets/img/thubnail-slider-img.png" />
-              </div>
-            </div>
-
-            <div class="slide">
-              <div class="box">
-                <img src="assets/img/thubnail-slider-img.png" />
-              </div>
-            </div>
+      
           </div>
 
           <!-- Divider beneth the owl carausel -->
@@ -594,9 +553,11 @@
     </div>
 
     <!-- footer starts  -->
-    <footer>
+    <footer class="footer">
+      <div class="container">
+
       <ul class="footer-nav">
-        <li><a href="#">OUR TRACKS </a></li>
+        <li><a href="#">OUR TRACKS</a></li>
 
         <li><a href="#">FIND EVENTS</a></li>
 
@@ -623,8 +584,10 @@
       </ul>
 
       <div class="copyright">&copy; copyright 2020 Adidas</div>
+
+    </div>
     </footer>
-    
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
 
