@@ -74,17 +74,19 @@ $(document).ready(function () {
   // thumbnails slider ends
 
   // 6. Search form icon remove and cross toggle
-  $(document).ready(function () {
     $(".input-data").on("input", function () {
       // Print entered value in a div box
       var res = $(this).val();
 
-      if (res != 0) {
+      if (res != 0 && window.matchMedia("(min-width: 768px)").matches) {
         $(".submit-data").addClass("hide");
-      } else if (res == 0) {
+      } else if (res == 0 && window.matchMedia("(min-width: 768px)").matches) {
         $(".submit-data").removeClass("hide");
       }
     });
-  });
+
+
+
+
 });
 // main document brackets close
