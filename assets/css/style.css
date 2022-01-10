@@ -628,7 +628,7 @@ input:-webkit-autofill:active {
 
 /* thumbnail slider css starts  */
 .owl-carousel-2 {
-  padding: 0px 33px 33px 33px;
+  padding: 0px 33px 0px 33px;
   position: relative;
 }
 
@@ -1557,6 +1557,7 @@ input:-webkit-autofill:active {
     padding: 18px 16px 16px 22px;
     margin-left: 10px;
   }
+
   .hero-slider .main-slider-1 .video-box .play-btn > img {
     max-height: 25px;
   }
